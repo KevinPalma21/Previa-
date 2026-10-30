@@ -41,21 +41,21 @@ needs visible for follow-up. It has not been evaluated for reducing missed visit
 ## How it works
 
 ```mermaid
-%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"15px","primaryTextColor":"#073B62","lineColor":"#377DA6"},"flowchart":{"curve":"linear","nodeSpacing":24,"rankSpacing":24}}}%%
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"15px","primaryTextColor":"#073B62","lineColor":"#377DA6"},"flowchart":{"curve":"linear","nodeSpacing":24,"rankSpacing":18}}}%%
 flowchart TD
-    VISIT["Visit + caregiver question<br/>Fictional appointment context"]
+    VISIT["Visit + caregiver question"]
     SCREEN{"Safety screen"}
-    COORDINATOR["Python coordinator<br/>Runs the needed steps in order"]
-    READINESS["1 · Readiness agent<br/>Identifies the readiness need and proposes a next step"]
+    COORDINATOR["Python coordinator"]
+    READINESS["1 · Readiness agent"]
     POLICY{"Python policy check"}
-    ORCHESTRATOR["2 · Orchestrator agent<br/>Chooses whether a public-resource lookup is useful"]
-    RESOURCE["3 · Resource agent · optional<br/>Finds approved public guidance or abstains"]
-    COMPOSE["Python response composition<br/>Uses approved guidance or controlled wording"]
+    ORCHESTRATOR["2 · Orchestrator agent"]
+    RESOURCE["3 · Resource agent · optional"]
+    COMPOSE["Python composes the response"]
     PREVIEW["Safe caregiver response"]
-    COMMUNICATION["4 · Communication agent<br/>Drafts an internal staff summary"]
-    SUMMARY_CHECK["Python summary checks<br/>Checks evidence or uses a template fallback"]
-    REVIEW["Human review<br/>Local appointment-linked care-team task"]
-    CLINICAL["Offer Care team review<br/>No AI roles run"]
+    COMMUNICATION["4 · Communication agent<br/>Internal staff summary"]
+    SUMMARY_CHECK["Python summary checks<br/>Validated draft or template"]
+    REVIEW["Human review<br/>Local care-team task"]
+    CLINICAL["Offer Care team review<br/>No AI roles"]
     DENIED["Request denied<br/>No AI roles or staff ticket"]
     STOP["Stop unsupported action"]
 
