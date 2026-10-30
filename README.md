@@ -41,21 +41,57 @@ needs visible for follow-up. It has not been evaluated for reducing missed visit
 ## How it works
 
 ```mermaid
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Arial","fontSize":"15px","primaryTextColor":"#073B62","lineColor":"#377DA6"},"flowchart":{"curve":"linear","nodeSpacing":24,"rankSpacing":24}}}%%
 flowchart TD
-    A[Caregiver question or update] --> B{Python input screen}
-    B -->|Recognized unrelated or unauthorized request| C[Refuse: no AI call or ticket]
-    B -->|Recognized medical question| D[Offer Care team review]
-    D -->|Caregiver selects the button| E[Create appointment-linked local ticket]
-    B -->|Supported logistics| F[Readiness: propose next step]
-    F --> G{Python policy check}
-    G -->|Blocked proposal| H[Stop proposed action]
-    G -->|Human review needed| I[Communication: draft staff summary]
-    I --> J[Validate draft or use template fallback]
-    J --> K[Create local review task]
-    G -->|Guidance permitted| L[Orchestrator: select approved topic]
-    L -->|Topic selected| M[Resource: approved guidance lookup]
-    L -->|No topic selected| N[Python composes bounded response]
-    M --> N
+    VISIT["Visit + caregiver question<br/>Fictional appointment context"]
+    SCREEN{"Safety screen"}
+    COORDINATOR["Python coordinator<br/>Runs the needed steps in order"]
+    READINESS["1 · Readiness agent<br/>Identifies the readiness need and proposes a next step"]
+    POLICY{"Python policy check"}
+    ORCHESTRATOR["2 · Orchestrator agent<br/>Chooses whether a public-resource lookup is useful"]
+    RESOURCE["3 · Resource agent · optional<br/>Finds approved public guidance or abstains"]
+    COMPOSE["Python response composition<br/>Uses approved guidance or controlled wording"]
+    PREVIEW["Safe caregiver response"]
+    COMMUNICATION["4 · Communication agent<br/>Drafts an internal staff summary"]
+    SUMMARY_CHECK["Python summary checks<br/>Checks evidence or uses a template fallback"]
+    REVIEW["Human review<br/>Local appointment-linked care-team task"]
+    CLINICAL["Offer Care team review<br/>No AI roles run"]
+    DENIED["Request denied<br/>No AI roles or staff ticket"]
+    STOP["Stop unsupported action"]
+
+    VISIT --> SCREEN
+    SCREEN -->|Supported logistics| COORDINATOR
+    COORDINATOR --> READINESS
+    READINESS --> POLICY
+    POLICY -->|Guidance permitted| ORCHESTRATOR
+    ORCHESTRATOR -->|Approved topic selected| RESOURCE
+    RESOURCE --> COMPOSE
+    ORCHESTRATOR -->|No lookup needed| COMPOSE
+    COMPOSE --> PREVIEW
+
+    SCREEN -->|Recognized medical question| CLINICAL
+    CLINICAL -->|Caregiver requests review| REVIEW
+    SCREEN -->|Unrelated or unauthorized| DENIED
+    POLICY -->|Blocked proposal| STOP
+    POLICY -->|Staff judgment needed| COMMUNICATION
+    COMMUNICATION --> SUMMARY_CHECK
+    SUMMARY_CHECK --> REVIEW
+
+    classDef context fill:#FFFFFF,stroke:#93B7CF,color:#073B62,stroke-width:1.5px;
+    classDef control fill:#F3F6F8,stroke:#8AA4B8,color:#073B62,stroke-width:1.5px;
+    classDef agent fill:#E9F3FA,stroke:#2784B8,color:#073B62,stroke-width:1.5px;
+    classDef gate fill:#FFF5DF,stroke:#D5A34D,color:#073B62,stroke-width:1.5px;
+    classDef approved fill:#E6F4EE,stroke:#7FB39C,color:#174E3D,stroke-width:1.5px;
+    classDef human fill:#FFF5DF,stroke:#D5A34D,color:#78531B,stroke-width:1.5px;
+    classDef denied fill:#F7EDEE,stroke:#C68C91,color:#7C3039,stroke-width:1.5px;
+
+    class VISIT context;
+    class COORDINATOR,COMPOSE,SUMMARY_CHECK control;
+    class READINESS,ORCHESTRATOR,RESOURCE,COMMUNICATION agent;
+    class SCREEN,POLICY gate;
+    class PREVIEW approved;
+    class CLINICAL,REVIEW human;
+    class DENIED,STOP denied;
 ```
 
 Python controls the sequence, validates outputs, and enforces tool permissions.
