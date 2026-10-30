@@ -1,0 +1,23 @@
+[
+  {
+    "topic": "what_to_bring",
+    "summary": "For a visit, Lurie advises families to bring the child's current medications and pharmacy contact information, available medical records and test results, any insurance-required referrals, and the insurance card and co-payment.",
+    "source_title": "Preparing for Your Appointment at Lurie Children's",
+    "source_url": "https://www.luriechildrens.org/en/appointments/preparing-for-your-first-appointment/",
+    "checked_on": "2026-10-07"
+  },
+  {
+    "topic": "parking_and_directions",
+    "summary": "Use the facility name or address on your appointment to look up reviewed public parking instructions. VisitReady asks you to confirm unclear destinations and does not check live parking availability.",
+    "source_title": "Parking Information | Lurie Children's",
+    "source_url": "https://www.luriechildrens.org/en/patients-visitors/visiting-lurie-childrens/parking/",
+    "checked_on": "2026-10-20"
+  },
+  {
+    "topic": "registration_and_echeckin",
+    "summary": "Lurie Children's MyChart supports touchless E-check-in, updating insurance information, and completing questionnaires online. Review your appointment details in MyChart; for registration questions, contact Lurie Children's directly. This demo is not connected to MyChart and cannot check or update registration.",
+    "source_title": "About MyChart | Lurie Children's",
+    "source_url": "https://www.luriechildrens.org/en/patients-visitors/mychart/",
+    "checked_on": "2026-10-07"
+  }
+]

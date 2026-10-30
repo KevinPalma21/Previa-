@@ -1,0 +1,24 @@
+{
+  "appointment_id": "DEMO-001",
+  "patient_name": "Sofia (fictional)",
+  "location": {
+    "location_id": "main_hospital",
+    "name": "Lurie Children's — Main Hospital",
+    "address": "225 E. Chicago Avenue, Chicago, IL 60611"
+  },
+  "transportation": {
+    "status": "unconfirmed",
+    "evidence": "My sister might drive us.",
+    "source": "caregiver"
+  },
+  "registration": {
+    "status": "confirmed",
+    "evidence": "Registration marked complete in the sample record.",
+    "source": "synthetic hospital record"
+  },
+  "paperwork": {
+    "status": "unknown",
+    "evidence": "",
+    "source": "not provided"
+  }
+}

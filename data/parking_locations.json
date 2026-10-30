@@ -1,0 +1,110 @@
+[
+  {
+    "location_id": "main_hospital",
+    "name": "Lurie Children's — Main Hospital",
+    "address": "225 E. Chicago Avenue, Chicago, IL 60611",
+    "aliases": ["main hospital", "downtown hospital", "225 E Chicago", "225 Chicago", "Ann Robert H Lurie Childrens Hospital of Chicago"],
+    "area_terms": ["downtown", "Chicago", "60611", "Streeterville"],
+    "source_url": "https://www.luriechildrens.org/en/locations/ann-robert-h-lurie-children-s-hospital-of-chicago-18/",
+    "checked_on": "2026-10-20",
+    "options": [
+      {
+        "name": "Huron-Superior Parking Garage A",
+        "address": "222 E. Huron Street, Chicago, IL 60611",
+        "instructions": "Use the Huron Street entrance. Take the elevator to the second floor and follow signs for the pedestrian bridge to Lurie Children's. Bring your parking ticket to the second-floor concierge desk for validation.",
+        "source_url": "https://www.luriechildrens.org/globalassets/media/pages/patients--visitors/countdown-to-surgery-en.pdf"
+      },
+      {
+        "name": "Erie-Ontario Garage — alternate option",
+        "address": "321 E. Erie Street, Chicago, IL 60611",
+        "instructions": "Lurie lists this garage a few blocks from the main hospital as another parking option. Ticket validation is available at the hospital's second-floor concierge desk.",
+        "source_url": "https://www.luriechildrens.org/globalassets/media/pages/patients--visitors/countdown-to-surgery-en.pdf"
+      }
+    ]
+  },
+  {
+    "location_id": "lincoln_park",
+    "name": "Lurie Children's — Outpatient Center in Lincoln Park",
+    "address": "2515 N. Clark Street / 467 W. Deming Place, Chicago, IL 60614",
+    "aliases": ["outpatient center in Lincoln Park", "Lincoln Park outpatient center", "2515 N Clark", "2515 Clark", "467 W Deming", "467 Deming"],
+    "area_terms": ["Lincoln Park", "Chicago", "60614"],
+    "source_url": "https://www.luriechildrens.org/en/locations/illinois/chicago/outpatient-center-in-lincoln-park-191/",
+    "checked_on": "2026-10-20",
+    "options": [
+      {
+        "name": "Lincoln Park self parking",
+        "address": "2515 N. Clark Street, Chicago, IL 60614",
+        "instructions": "Lurie lists paid self parking at 2515 N. Clark Street. The center uses Clark and Deming buildings; check which building is on your appointment. Check the official page for current parking rates.",
+        "source_url": "https://www.luriechildrens.org/en/locations/illinois/chicago/outpatient-center-in-lincoln-park-191/"
+      }
+    ]
+  },
+  {
+    "location_id": "northbrook_outpatient",
+    "name": "Lurie Children's — Outpatient Center in Northbrook",
+    "address": "1131 Techny Road, Northbrook, IL 60062",
+    "aliases": ["outpatient center in Northbrook", "Northbrook outpatient center", "1131 Techny"],
+    "area_terms": ["Northbrook", "60062", "Techny"],
+    "source_url": "https://www.luriechildrens.org/en/locations/outpatient-center-in-northbrook-19/",
+    "checked_on": "2026-10-20",
+    "options": [
+      {
+        "name": "Outpatient Center on-site parking",
+        "address": "1131 Techny Road, Northbrook, IL 60062",
+        "instructions": "Lurie lists free on-site parking. The Surgery Center is next door at 1121 Techny Road, so confirm your appointment's building number.",
+        "source_url": "https://www.luriechildrens.org/en/locations/outpatient-center-in-northbrook-19/"
+      }
+    ]
+  },
+  {
+    "location_id": "northbrook_surgery",
+    "name": "Lurie Children's — Surgery Center in Northbrook",
+    "address": "1121 Techny Road, Northbrook, IL 60062",
+    "aliases": ["surgery center in Northbrook", "Northbrook surgery center", "1121 Techny"],
+    "area_terms": ["Northbrook", "60062", "Techny"],
+    "source_url": "https://www.luriechildrens.org/en/locations/outpatient-center-in-northbrook-19/",
+    "checked_on": "2026-10-20",
+    "options": [
+      {
+        "name": "Surgery Center adjacent lot",
+        "address": "1121 Techny Road, Northbrook, IL 60062",
+        "instructions": "Lurie's procedure guide lists free parking in the adjacent lot at the Northbrook Surgery Center. Confirm 1121 Techny Road on your appointment; the Outpatient Center is next door at 1131.",
+        "source_url": "https://www.luriechildrens.org/globalassets/media/pages/patients--visitors/countdown-to-surgery-en.pdf"
+      }
+    ]
+  },
+  {
+    "location_id": "skokie_outpatient",
+    "name": "Lurie Children's — Outpatient Center in Skokie",
+    "address": "3722 W. Touhy Avenue, Skokie, IL 60076",
+    "aliases": ["outpatient center in Skokie", "Skokie outpatient center", "3722 W Touhy", "3722 Touhy"],
+    "area_terms": ["Skokie", "60076", "Touhy"],
+    "source_url": "https://www.luriechildrens.org/en/locations/outpatient-center-in-skokie/",
+    "checked_on": "2026-10-20",
+    "options": [
+      {
+        "name": "Outpatient Center adjacent lot",
+        "address": "3722 W. Touhy Avenue, Skokie, IL 60076",
+        "instructions": "Lurie lists free parking in the adjacent lot at this Outpatient Center.",
+        "source_url": "https://www.luriechildrens.org/en/locations/outpatient-center-in-skokie/"
+      }
+    ]
+  },
+  {
+    "location_id": "westchester_outpatient",
+    "name": "Lurie Children's — Outpatient Center in Westchester",
+    "address": "2301 Enterprise Drive, Westchester, IL 60154",
+    "aliases": ["outpatient center in Westchester", "Westchester outpatient center", "2301 Enterprise"],
+    "area_terms": ["Westchester", "60154", "Enterprise"],
+    "source_url": "https://www.luriechildrens.org/en/locations/outpatient-center-in-westchester-21/",
+    "checked_on": "2026-10-20",
+    "options": [
+      {
+        "name": "Outpatient Center on-site parking",
+        "address": "2301 Enterprise Drive, Westchester, IL 60154",
+        "instructions": "Lurie lists on-site parking at this location. The nearby Westbrook rehabilitation location has a different address; confirm your appointment is at 2301 Enterprise Drive.",
+        "source_url": "https://www.luriechildrens.org/en/locations/outpatient-center-in-westchester-21/"
+      }
+    ]
+  }
+]
